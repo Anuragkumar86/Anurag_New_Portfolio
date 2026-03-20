@@ -14,7 +14,7 @@
 
 ## 🌟 Live Demo
 
-[🔗 **View Live Portfolio**](https://anuragkumar.dev) - Experience the interactive 3D portfolio in action!
+[🔗 **View Live Portfolio**](https://anurag-new-portfolio.vercel.app/) - Experience the interactive 3D portfolio in action!
 
 ## ✨ Features
 
