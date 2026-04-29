@@ -69,7 +69,6 @@ const projects = [
       { name: "Next.js", Icon: SiNextdotjs, color: "#ffffff" },
       { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
       { name: "Tailwind CSS", Icon: SiTailwindcss, color: "#06B6D4" },
-      { name: "Node.js", Icon: SiNodedotjs, color: "#339933" },
       { name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
       { name: "Prisma", Icon: SiPrisma, color: "#ffffff" }
     ],
