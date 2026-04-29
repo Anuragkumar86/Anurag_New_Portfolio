@@ -5,10 +5,37 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink, Github, X, ChevronDown, ChevronUp } from "lucide-react";
 import GlowButton from "@/components/ui/GlowButton";
-import { SiNextdotjs, SiTypescript, SiNodedotjs, SiPostgresql, SiPrisma, SiSocketdotio, SiTailwindcss, SiExpress, SiVercel } from "react-icons/si";
+import { SiNextdotjs, SiTypescript, SiNodedotjs, SiPostgresql, SiPrisma, SiSocketdotio, SiTailwindcss, SiExpress, SiVercel, SiRedis } from "react-icons/si";
 import Link from "next/link";
 
 const projects = [
+
+  {
+  id: "mocksentry",
+  title: "MockSentry - AI-Powered Mock Interview SaaS",
+  summary:
+    "Production SaaS platform with RAG memory system that personalises mock interviews by tracking every user's weak spots across sessions.",
+  challenge:
+    "Building a persistent AI memory layer that remembers a student's specific failure patterns across sessions, while ensuring async Gemini AI calls (3–10s) never hang the browser — and keeping infrastructure costs at zero with zero active users.",
+  solution:
+    "Implemented a RAG memory system using pgvector (1536-dim cosine similarity embeddings) to retrieve past weak answers and inject them into the AI interviewer's prompt. Decoupled all AI processing from the HTTP cycle using BullMQ workers on Render.com (API returns <200ms). Migrated from BullMQ + Redis polling to QStash (push-based), eliminating 148K+ idle Redis commands/month. Built 5 background workers, 24-company card system, AI-generated daily sessions, resume-based interview gen, and Razorpay payments.",
+  result:
+    "Shipped a live production SaaS at mocksentry.com — 30+ API routes, 5 async workers, 24 companies (14 Indian + 10 FAANG), Razorpay payments with HMAC-SHA256 verification, Google OAuth, zero idle infra cost after QStash migration.",
+  image: "/screenshots/mockSentry.png",
+  techStack: [
+    { name: "Next.js 14", Icon: SiNextdotjs, color: "#ffffff" },
+    { name: "TypeScript", Icon: SiTypescript, color: "#3178C6" },
+    { name: "PostgreSQL", Icon: SiPostgresql, color: "#4169E1" },
+    { name: "Prisma", Icon: SiPrisma, color: "#ffffff" },
+    { name: "Redis", Icon: SiRedis, color: "#DC382D" },
+    { name: "Node.js", Icon: SiNodedotjs, color: "#339933" },
+    { name: "Vercel", Icon: SiVercel, color: "#ffffff" },
+  ],
+  liveLink: "https://www.mocksentry.com",
+  githubLink: "https://github.com/Anuragkumar86/MockSentry",
+  color: "from-violet-500/20 to-cyan-500/20",
+  glowColor: "group-hover:shadow-[0_0_30px_rgba(139,92,246,0.3)]",
+},
   {
     id: "safewalk",
     title: "SafeWalk - Proactive Personal Safety",
